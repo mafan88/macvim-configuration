@@ -38,6 +38,7 @@ Bundle 'tpope/vim-repeat'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'vim-scripts/YankRing.vim'
+Plugin 'kchmck/vim-coffee-script'
 
 " Misc
 Bundle 'xolox/vim-misc'
