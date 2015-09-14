@@ -283,6 +283,7 @@ set tags=./.tags;
 
 let g:easytags_dynamic_files = 1
 let g:easytags_cmd           = '/usr/local/bin/ctags'
+let g:easytags_auto_update   = 0
 let g:easytags_languages     = {
 \   'php': {
 \     'cmd': g:easytags_cmd,
