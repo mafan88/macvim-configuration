@@ -17,7 +17,8 @@ Bundle 'joonty/vdebug'
 Bundle 'majutsushi/tagbar'
 Bundle 'stephpy/vim-php-cs-fixer'
 Bundle 'xolox/vim-easytags'
-Bundle 'shawncplus/phpcomplete.vim'
+Plugin 'm2mdas/phpcomplete-extended'
+Plugin 'arnaud-lb/vim-php-namespace'
 
 " Snippets
 Plugin 'SirVer/ultisnips'
@@ -39,9 +40,13 @@ Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'vim-scripts/YankRing.vim'
 Plugin 'kchmck/vim-coffee-script'
+Bundle 'matze/vim-move'
 
 " Misc
 Bundle 'xolox/vim-misc'
 Bundle 'Keithbsmiley/gist.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'bling/vim-airline'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'mustache/vim-mustache-handlebars'
+
