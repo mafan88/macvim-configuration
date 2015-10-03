@@ -134,7 +134,7 @@ function! Multiple_cursors_before()
 endfunction
 
 function! Multiple_cursors_after()
-    let g:ycm_auto_trigger = 1
+    let g:ycm_auto_trigger = 0 " keep disabled
 endfunction
 
 " Tagbar management
@@ -299,3 +299,5 @@ let g:yankring_replace_n_pkey = '<C-y>'
 let g:yankring_replace_n_nkey = '<C-u>'
 let g:yankring_paste_using_g  = 0
 noremap <leader>y :call YRShow()<cr>
+
+let g:phpcomplete_index_composer_command = '/usr/local/bin/composer'
