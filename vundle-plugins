@@ -17,7 +17,7 @@ Bundle 'joonty/vdebug'
 Bundle 'majutsushi/tagbar'
 Bundle 'stephpy/vim-php-cs-fixer'
 Bundle 'xolox/vim-easytags'
-Bundle 'm2mdas/phpcomplete-extended'
+"Bundle 'm2mdas/phpcomplete-extended'
 Bundle 'shawncplus/phpcomplete.vim'
 Bundle 'arnaud-lb/vim-php-namespace'
 
