@@ -111,31 +111,12 @@ noremap H F$
 
 " PHP complete
 let g:phpcomplete_parse_docblock_comments = 1
+let g:phpcomplete_index_composer_command = '/usr/local/bin/composer'
 
 " php documentor
 inoremap <C-o> <ESC>:call PhpDocSingle()<CR>i
 nnoremap <C-o> :call PhpDocSingle()<CR>
 vnoremap <C-o> :call PhpDocRange()<CR> 
-
-" Awesome autocomplete
-let g:ycm_min_num_of_chars_for_completion               = 2
-let g:ycm_auto_trigger                                  = 0
-let g:ycm_collect_identifiers_from_tags_files           = 1
-let g:ycm_autoclose_preview_window_after_completion     = 1
-let g:ycm_autoclose_preview_window_after_insertion      = 1
-let g:ycm_collect_identifiers_from_comments_and_strings = 1
-
-" fix escape issue with YouCompleteMe & vim-autoclose (https://github.com/Valloric/YouCompleteMe/issues/9)
-let g:AutoClosePumvisible = {"ENTER": "<C-Y>", "ESC": "<ESC>"}
-
-" slow multiple_cursors & YCM
-function! Multiple_cursors_before()
-    let g:ycm_auto_trigger = 0
-endfunction
-
-function! Multiple_cursors_after()
-    let g:ycm_auto_trigger = 0 " keep disabled
-endfunction
 
 " Tagbar management
 nmap <leader>t :TagbarToggle<CR>
@@ -278,21 +259,7 @@ let g:php_cs_fixer_php_path = "php"      " Path to PHP
 let g:php_cs_fixer_verbose  = 1          " Return the output of
 let g:php_cs_fixer_enable_default_mapping = 1       " <leader>pcf
 
-" easytags
-set tags=./.tags;
-
-let g:easytags_dynamic_files = 1
-let g:easytags_cmd           = '/usr/local/bin/ctags'
-let g:easytags_auto_update   = 0
-let g:easytags_languages     = {
-\   'php': {
-\     'cmd': g:easytags_cmd,
-\       'args': ['--fields=+aimS'],
-\       'fileoutput_opt': '-f',
-\       'stdout_opt': '-f-',
-\       'recurse_flag': '-R'
-\   }
-\}
+set tags=.tags;
 
 " yank ring
 let g:yankring_replace_n_pkey = '<C-y>'
@@ -300,4 +267,5 @@ let g:yankring_replace_n_nkey = '<C-u>'
 let g:yankring_paste_using_g  = 0
 noremap <leader>y :call YRShow()<cr>
 
-let g:phpcomplete_index_composer_command = '/usr/local/bin/composer'
+" super tab
+let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
