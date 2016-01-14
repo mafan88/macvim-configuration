@@ -32,13 +32,6 @@ ln -s ./vim/vimrc .vimrc
 Now start `vim` and issue the `:PluginInstall` command. This will install all the plugin via [Vundle](https://github.com/gmarik/Vundle.vim). 
 Some plugins require special attention:
 
-### YouCompleteMe
-To build [YouCompleteMe](https://github.com/Valloric/YouCompleteMe), you need to do the following:
-```
-cd ~/vim/bundle/YouCompleteMe
-./install.sh
-```
-
 ### Vimproc
 To build [Vimproc](https://github.com/Shougo/vimproc.vim), you need to do the following:
 ```
