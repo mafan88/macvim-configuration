@@ -259,8 +259,6 @@ let g:php_cs_fixer_php_path = "php"      " Path to PHP
 let g:php_cs_fixer_verbose  = 1          " Return the output of
 let g:php_cs_fixer_enable_default_mapping = 1       " <leader>pcf
 
-set tags=.tags;
-
 " yank ring
 let g:yankring_replace_n_pkey = '<C-y>'
 let g:yankring_replace_n_nkey = '<C-u>'
