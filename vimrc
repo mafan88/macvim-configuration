@@ -1,4 +1,4 @@
-""
+"
 " Custom .vimrc file
 " 
 " This is in the public domain, so feel free to use / change / redistribute it
@@ -58,8 +58,8 @@ set tabstop=4                   " use 4 spaces for tabs
 set shiftwidth=4
 set softtabstop=4
 set expandtab
-set autochdir
 set incsearch
+set autochdir
 set ignorecase
 set smartcase
 set ls=2
@@ -154,12 +154,6 @@ vnoremap > >gv
 " need sudo?
 cmap w!! w !sudo tee % >/dev/null
 
-" Ultisnip config
-let g:UltiSnipsExpandTrigger       = "<C-l>"
-let g:UltiSnipsJumpForwardTrigger  = "<C-l>"
-let g:UltiSnipsJumpBackwardTrigger = "<C-z>"
-let g:UltiSnipsEditSplit           = "vertical"
-
 " reset the search
 nmap <silent> ,/ :nohlsearch<CR>
 
@@ -213,12 +207,6 @@ nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
 " spellcheck toggle (on/off)
 nmap <silent> <leader>s :set spell!<CR>
 
-" Rainbow parentheses
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
-
 " CTRL + hjkl to move between windows
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -246,7 +234,6 @@ let g:syntastic_check_on_wq              = 0
 let g:syntastic_php_checkers             = ['php', 'phpcs']        " do not run phpmd
 let g:syntastic_php_phpcs_args           = '-s -n --standard=PSR2' " always check against PSR2
 
-
 " Add warnings to the status line
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -259,11 +246,13 @@ let g:php_cs_fixer_php_path = "php"      " Path to PHP
 let g:php_cs_fixer_verbose  = 1          " Return the output of
 let g:php_cs_fixer_enable_default_mapping = 1       " <leader>pcf
 
-" yank ring
-let g:yankring_replace_n_pkey = '<C-y>'
-let g:yankring_replace_n_nkey = '<C-u>'
-let g:yankring_paste_using_g  = 0
-noremap <leader>y :call YRShow()<cr>
+inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 
-" super tab
-let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+" Ultisnip config
+let g:UltiSnipsExpandTrigger       = "<C-l>"
+let g:UltiSnipsJumpForwardTrigger  = "<C-l>"
+let g:UltiSnipsJumpBackwardTrigger = "<C-z>"
+let g:UltiSnipsEditSplit           = "vertical"
+
+let g:tern_show_argument_hints='on_hold'
+let g:tern_map_keys = 1
