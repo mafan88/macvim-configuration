@@ -59,7 +59,6 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set incsearch
-set autochdir
 set ignorecase
 set smartcase
 set ls=2
@@ -87,7 +86,7 @@ autocmd BufRead,BufNewFile *phtml       setfiletype php "Zend framework template
 autocmd FileType python     set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html       set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType css        set omnifunc=csscomplete#CompleteCSS
+autocmd FileType css        set omnifunc=csscomplete#CompleteCSS noci
 autocmd FileType xml        set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php        set omnifunc=phpcomplete#CompletePHP
 
@@ -138,9 +137,6 @@ let g:ctrlp_extensions = ['funky']
 nnoremap <Leader>fu :CtrlPFunky<Cr>
 nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
 
-" Remove whitespace on close
-autocmd FileType c,cpp,java,go,php,javascript,python,twig,xml,yml,perl autocmd BufWritePre <buffer> call StripTrailingWhitespace()
-
 " Yank 'till the end of the line
 nnoremap Y y$
 
@@ -169,6 +165,9 @@ function! StripTrailingWhitespace()
     let @/=_s
     call cursor(l, c)
 endfunction
+
+" Remove whitespace on close
+autocmd BufWritePre <buffer> call StripTrailingWhitespace()
 
 " Tabularize 
 nmap <Leader>a=  :Tabularize /=<CR>
@@ -254,5 +253,41 @@ let g:UltiSnipsJumpForwardTrigger  = "<C-l>"
 let g:UltiSnipsJumpBackwardTrigger = "<C-z>"
 let g:UltiSnipsEditSplit           = "vertical"
 
+" Tern
 let g:tern_show_argument_hints='on_hold'
 let g:tern_map_keys = 1
+
+" Rainbow for darks schema
+let g:rbpt_colorpairs = [
+    \ ['blue',       '#FF6000'],
+    \ ['cyan', '#00FFFF'],
+    \ ['darkmagenta',    '#CC00FF'],
+    \ ['yellow',   '#FFFF00'],
+    \ ['red',     '#FF0000'],
+    \ ['darkgreen',    '#00FF00'],
+    \ ['White',         '#c0c0c0'],
+    \ ['blue',       '#FF6000'],
+    \ ['cyan', '#00FFFF'],
+    \ ['darkmagenta',    '#CC00FF'],
+    \ ['yellow',   '#FFFF00'],
+    \ ['red',     '#FF0000'],
+    \ ['darkgreen',    '#00FF00'],
+    \ ['White',         '#c0c0c0'],
+    \ ['blue',       '#FF6000'],
+    \ ['cyan', '#00FFFF'],
+    \ ['darkmagenta',    '#CC00FF'],
+    \ ['yellow',   '#FFFF00'],
+    \ ['red',     '#FF0000'],
+    \ ['darkgreen',    '#00FF00'],
+    \ ['White',         '#c0c0c0'],
+    \ ]
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
+" move blocks of text
+let g:move_key_modifier = 'C'
+
+" better autochdir
+autocmd BufEnter * silent! lcd %:p:h
