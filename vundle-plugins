@@ -1,19 +1,22 @@
 " Vundle plugins
 
+" Utility
+Plugin 'Shougo/vimproc'
+Plugin 'Shougo/unite.vim'
+
 " File navigation
-Bundle 'scrooloose/nerdtree'
-Bundle 'tyok/ack.vim'
-Bundle 'tyok/nerdtree-ack'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tyok/ack.vim'
+Plugin 'tyok/nerdtree-ack'
 Plugin 'xuyuanp/nerdtree-git-plugin'
-Bundle 'kien/ctrlp.vim'
-Bundle 'tacahiroy/ctrlp-funky'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'tacahiroy/ctrlp-funky'
 
 " PHP
-Bundle 'stephpy/vim-phpdoc'
-Bundle 'joonty/vdebug'
-Bundle 'stephpy/vim-php-cs-fixer'
-Bundle 'shawncplus/phpcomplete.vim'
-Bundle 'arnaud-lb/vim-php-namespace'
+Plugin 'stephpy/vim-phpdoc'
+Plugin 'stephpy/vim-php-cs-fixer'
+Plugin 'shawncplus/phpcomplete.vim'
+Plugin 'arnaud-lb/vim-php-namespace'
 
 " Snippets
 Plugin 'SirVer/ultisnips'
@@ -21,12 +24,12 @@ Plugin 'honza/vim-snippets'
 Plugin 'motanelu/php-snippets'
 
 " Client-side Javascript, CSS, templates
-Bundle 'ternjs/tern_for_vim'
+Plugin 'ternjs/tern_for_vim'
 Plugin 'othree/yajs.vim'
 Plugin 'othree/jspc.vim'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'othree/csscomplete.vim'
-Bundle '1995eaton/vim-better-javascript-completion'
+Plugin '1995eaton/vim-better-javascript-completion'
 Plugin 'pangloss/vim-javascript'
 Plugin 'ap/vim-css-color'
 Plugin 'mustache/vim-mustache-handlebars'
@@ -34,29 +37,28 @@ Plugin 'elzr/vim-json'
 
 " GIT
 Plugin 'airblade/vim-gitgutter'
-Bundle 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
 
 " Edit
-Bundle 'godlygeek/tabular'
-Bundle 'majutsushi/tagbar'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'tpope/vim-surround'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'tommcdo/vim-exchange'
-Bundle 'mbbill/undotree'
-Bundle 'Raimondi/delimitMate'
-Bundle 'tpope/vim-repeat'
-Bundle 'matze/vim-move'
+Plugin 'godlygeek/tabular'
+Plugin 'majutsushi/tagbar'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'tpope/vim-surround'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'tommcdo/vim-exchange'
+Plugin 'mbbill/undotree'
+Plugin 'Raimondi/delimitMate'
+Plugin 'tpope/vim-repeat'
+Plugin 'matze/vim-move'
 Plugin 'valloric/youcompleteme'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'tomtom/tcomment_vim'
+Plugin 'joonty/vdebug'
 
 " Misc
-Bundle 'scrooloose/syntastic'
-Bundle 'bling/vim-airline'
+Plugin 'scrooloose/syntastic'
+Plugin 'bling/vim-airline'
 Plugin 'mhinz/vim-startify'
-Bundle 'Shougo/vimproc'
-Bundle 'Shougo/unite.vim'
-Bundle 'Shougo/vimshell.vim'
+Plugin 'Shougo/vimshell.vim'
 Plugin 'embear/vim-localvimrc'
 Plugin 'mattn/webapi-vim'
