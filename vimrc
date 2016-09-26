@@ -239,7 +239,7 @@ colorscheme solarized
         \}
     " }}}
 
-    " {{{ scrooloose/syntastic 
+    " {{{ scrooloose/syntastic
         let g:syntastic_always_populate_loc_list = 0
         let g:syntastic_auto_loc_list            = 0
         let g:syntastic_check_on_wq              = 0
@@ -294,6 +294,10 @@ colorscheme solarized
     let g:php_cs_fixer_php_path = "php"      " Path to PHP
     let g:php_cs_fixer_verbose  = 1          " Return the output of
     let g:php_cs_fixer_enable_default_mapping = 1       " <leader>pcf
+
+    let g:ycm_semantic_triggers = {}
+    let g:ycm_semantic_triggers.php =
+    \ ['->', '::', '(', 'use ', 'namespace ', '\']
 
     autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 " }}}
