@@ -109,6 +109,8 @@ colorscheme solarized
 
     " Remove whitespace on write
     autocmd BufWritePre * call StripTrailingWhitespace()
+
+    au FileType javascript setl sw=2 sts=2 et
 " }}}
 
 " {{{ Utility mappings
@@ -158,6 +160,9 @@ colorscheme solarized
     noremap to :tabonly<cr>     " close all other tabs
 
     inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
+
+    " go back after a gf
+    noremap gb <C-o>
 " }}}
 
 " {{{ Plugin configurations
@@ -239,10 +244,17 @@ colorscheme solarized
         \}
     " }}}
 
-    " {{{ scrooloose/syntastic 
-        let g:syntastic_always_populate_loc_list = 0
+    " {{{ dhruvasagar/vim-table-mode
+        let g:table_mode_corner_corner   = "+"
+        let g:table_mode_header_fillchar = "="
+    " }}}
+
+    " {{{ scrooloose/syntastic
+        let g:syntastic_always_populate_loc_list = 1
         let g:syntastic_auto_loc_list            = 0
-        let g:syntastic_check_on_wq              = 0
+        let g:syntastic_check_on_wq              = 1
+        let g:syntastic_check_on_open            = 1
+        let g:syntastic_javascript_checkers      = ['standard']
     " }}}
 
     " {{{ ternjs/tern_for_vim
@@ -253,6 +265,10 @@ colorscheme solarized
     " {{{ Lokaltog/vim-easymotion
         hi link EasyMotionTarget ErrorMsg
         hi link EasyMotionShade  Comment
+    " }}}
+
+    " {{{ 1995eaton/vim-better-javascript-completion
+        let g:vimjs#smartcomplete = 1
     " }}}
 
     let g:airline_powerline_fonts = 1   " bling/vim-airline
