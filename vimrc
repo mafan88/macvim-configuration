@@ -111,6 +111,7 @@ colorscheme solarized
     autocmd BufWritePre * call StripTrailingWhitespace()
 
     au FileType javascript setl sw=2 sts=2 et
+    au FileType html setl sw=2 sts=2 et
 " }}}
 
 " {{{ Utility mappings
